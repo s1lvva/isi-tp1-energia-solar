@@ -1,0 +1,77 @@
+# Parâmetros do processo de ETL
+# Valores entre <> são para preencher.
+
+local:
+  nome: Braga
+  latitude: 41.55
+  longitude: -8.42
+  codigo_postal_4d: "4700"
+  fuso_horario: Europe/Lisbon
+
+casa:
+  # Perfil-tipo da E-REDES: BTN C (até 13,8 kVA e até 7140 kWh/ano)
+  #                         BTN B (até 13,8 kVA e mais de 7140 kWh/ano)
+  perfil_btn: C
+  consumo_anual_kwh: 4000
+  potencia_contratada_kva: 6.9
+
+# Cenários a comparar. Convenção PVGIS e Open-Meteo:
+# orientação 0 = sul, -90 = nascente, 90 = poente
+cenarios:
+  - id: A
+    descricao: 3 kWp a sul, sem bateria
+    potencia_kwp: 3.0
+    inclinacao_graus: 30
+    orientacao_graus: 0
+    perdas_pct: 14
+    bateria_kwh: 0
+    custo_instalacao_eur: <custo>
+  - id: B
+    descricao: 4 kWp a sul, sem bateria
+    potencia_kwp: 4.0
+    inclinacao_graus: 30
+    orientacao_graus: 0
+    perdas_pct: 14
+    bateria_kwh: 0
+    custo_instalacao_eur: <custo>
+  - id: C
+    descricao: 4 kWp a sul, com bateria de 5 kWh
+    potencia_kwp: 4.0
+    inclinacao_graus: 30
+    orientacao_graus: 0
+    perdas_pct: 14
+    bateria_kwh: 5
+    custo_instalacao_eur: <custo>
+
+fontes:
+  pvgis:
+    url: https://re.jrc.ec.europa.eu/api/v5_3/seriescalc
+    ano_inicio: 2023
+    ano_fim: 2023
+  eredes_perfis:
+    url: https://www.e-redes.pt/sites/eredes/files/2025-12/Perfil_Consumo_Inje%C3%A7%C3%A3o_E-REDES_2026.xlsx
+    soma_normalizada: 1000
+  eredes_open_data:
+    url: https://e-redes.opendatasoft.com/api/explore/v2.1/catalog/datasets/consumos_horario_codigo_postal/exports/json
+  omie:
+    zona: PT
+    granularidade_minutos: 15
+  open_meteo:
+    url_previsao: https://api.open-meteo.com/v1/forecast
+    url_historico: https://archive-api.open-meteo.com/v1/archive
+  ipma:
+    url_observacoes: https://api.ipma.pt/open-data/observation/meteorology/stations/observations.json
+    url_estacoes: https://api.ipma.pt/open-data/observation/meteorology/stations/stations.json
+    id_estacao: <id da estação mais próxima de Braga>
+    valor_em_falta: -99.0
+
+tarifario:
+  tipo: <simples | bi-horário | indexado>
+  preco_compra_eur_kwh: <preço>
+  # Venda do excedente: indexada ao OMIE com desconto do comercializador
+  venda_desconto_pct_omie: <desconto>
+
+alertas:
+  # Notificar quando o retorno do melhor cenário passar este limite
+  retorno_maximo_anos: 8
+  email_destino: <email>
