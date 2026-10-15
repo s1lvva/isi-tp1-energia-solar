@@ -7,7 +7,7 @@
 | **Curso** | Licenciatura em Engenharia de Sistemas Informáticos — ESTi / IPCA |
 | **Ano letivo** | 2026/27 |
 | **Trabalho** | Trabalho Prático I — Processos de ETL |
-| **Aluno** | _André Silva_ — n.º _a27965_ |
+| **Aluno** | _Nome_ — n.º _aXXXXX_ |
 | **Docentes** | Luís Ferreira e Óscar Ribeiro |
 | **Entrega** | 22 de outubro de 2026 |
 
