@@ -449,12 +449,17 @@
     </hop>
     <hop>
       <from>JSON input 2 </from>
-      <to>Text file output</to>
+      <to>Regex evaluation</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>JSON input 1</from>
       <to>JSON input 2 </to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Regex evaluation</from>
+      <to>Text file output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -547,7 +552,7 @@
     </GUI>
   </step>
   <step>
-    <name>JSON input 2 </name>
+    <name>JSON input 1</name>
     <type>JsonInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -578,8 +583,8 @@
     </file>
     <fields>
       <field>
-        <name>time</name>
-        <path>	$.time</path>
+        <name>hora_json</name>
+        <path>$.outputs.hourly[*]</path>
         <type>String</type>
         <format/>
         <currency/>
@@ -590,6 +595,64 @@
         <trim_type>none</trim_type>
         <repeat>N</repeat>
       </field>
+    </fields>
+    <limit>0</limit>
+    <IsInFields>Y</IsInFields>
+    <IsAFile>N</IsAFile>
+    <valueField>result</valueField>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>JSON input 2 </name>
+    <type>JsonInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <readurl>N</readurl>
+    <removeSourceField>N</removeSourceField>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <ignoreMissingPath>Y</ignoreMissingPath>
+    <defaultPathLeafToNull>Y</defaultPathLeafToNull>
+    <includeNulls>N</includeNulls>
+    <rownum_field/>
+    <file>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
       <field>
         <name>P</name>
         <path>$.P</path>
@@ -699,18 +762,6 @@
     </file>
     <fields>
       <field>
-        <name>time</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
         <name>P</name>
         <type>Number</type>
         <format/>
@@ -724,7 +775,7 @@
       </field>
       <field>
         <name>G_i</name>
-        <type>String</type>
+        <type>Number</type>
         <format/>
         <currency/>
         <decimal/>
@@ -737,6 +788,18 @@
       <field>
         <name>T2m</name>
         <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>data_hora_utc</name>
+        <type>String</type>
         <format/>
         <currency/>
         <decimal/>
@@ -762,8 +825,8 @@
     </GUI>
   </step>
   <step>
-    <name>JSON input 1</name>
-    <type>JsonInput</type>
+    <name>Regex evaluation</name>
+    <type>RegexEval</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -772,52 +835,34 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <readurl>N</readurl>
-    <removeSourceField>N</removeSourceField>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <ignoreMissingPath>Y</ignoreMissingPath>
-    <defaultPathLeafToNull>Y</defaultPathLeafToNull>
-    <includeNulls>N</includeNulls>
-    <rownum_field/>
-    <file>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
+    <script>.*"time":"(\d{8}:\d{4})".*</script>
+    <matcher>hora_json</matcher>
+    <resultfieldname>regex_ok</resultfieldname>
+    <usevar>N</usevar>
+    <allowcapturegroups>Y</allowcapturegroups>
+    <replacefields>N</replacefields>
+    <canoneq>N</canoneq>
+    <caseinsensitive>N</caseinsensitive>
+    <comment>N</comment>
+    <dotall>N</dotall>
+    <multiline>N</multiline>
+    <unicode>N</unicode>
+    <unix>N</unix>
     <fields>
       <field>
-        <name>hora_json</name>
-        <path>$.outputs.hourly[*]</path>
+        <name>data_hora_utc</name>
         <type>String</type>
         <format/>
-        <currency/>
-        <decimal/>
         <group/>
+        <decimal/>
         <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+        <currency/>
       </field>
     </fields>
-    <limit>0</limit>
-    <IsInFields>Y</IsInFields>
-    <IsAFile>N</IsAFile>
-    <valueField>result</valueField>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -827,8 +872,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>240</yloc>
+      <xloc>464</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
