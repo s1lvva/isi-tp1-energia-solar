@@ -1,0 +1,6 @@
+cenario;descricao;potencia_kwp;custo_instalacao_eur;consumo_anual_kwh;preco_compra_eur_kwh;preco_venda_eur_kwh
+A;2 kWp orientados a sul, 30 graus;2;2800;4000;0.20;0.05
+B;3 kWp orientados a sul, 30 graus;3;3800;4000;0.20;0.05
+B;3 kWp orientados a sul, 30 graus;3;3800;4000;0.20;0.05
+C;4 kWp orientados a sul, 30 graus;4;4700;4000;0.20;0.05
+D;5 kWp orientados a sul, 30 graus;;5600;4000;0.20;0.05

@@ -482,7 +482,7 @@
         <currency/>
         <decimal/>
         <group/>
-        <nullif>https://re.jrc.ec.europa.eu/api/v5_3/seriescalc?lat=41.55&amp;lon=-8.42&amp;peakpower=3&amp;loss=14&amp;angle=30&amp;aspect=0&amp;pvcalculation=1&amp;startyear=2023&amp;endyear=2023&amp;outputformat=json</nullif>
+        <nullif>https://re.jrc.ec.europa.eu/api/v5_3/seriescalc?lat=41.55&amp;lon=-8.42&amp;peakpower=1&amp;loss=14&amp;angle=30&amp;aspect=0&amp;pvcalculation=1&amp;startyear=2023&amp;endyear=2023&amp;outputformat=json</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -720,6 +720,59 @@
     </GUI>
   </step>
   <step>
+    <name>Regex evaluation</name>
+    <type>RegexEval</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <script>.*"time":"(\d{8}:\d{4})".*</script>
+    <matcher>hora_json</matcher>
+    <resultfieldname>regex_ok</resultfieldname>
+    <usevar>N</usevar>
+    <allowcapturegroups>Y</allowcapturegroups>
+    <replacefields>N</replacefields>
+    <canoneq>N</canoneq>
+    <caseinsensitive>N</caseinsensitive>
+    <comment>N</comment>
+    <dotall>N</dotall>
+    <multiline>N</multiline>
+    <unicode>N</unicode>
+    <unix>N</unix>
+    <fields>
+      <field>
+        <name>data_hora_utc</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+        <currency/>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Text file output</name>
     <type>TextFileOutput</type>
     <description/>
@@ -742,9 +795,9 @@
     <endedLine/>
     <fileNameInField>N</fileNameInField>
     <fileNameField>C:\GitHub\isi-tp1-energia-solar\data\raw\pvgis_cenario_A.csv</fileNameField>
-    <create_parent_folder>Y</create_parent_folder>
+    <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${Internal.Transformation.Filename.Directory}/../../data/raw/pvgis_cenario_A</name>
+      <name>${Internal.Transformation.Filename.Directory}/../data/output/01_pvgis_horario</name>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
       <extention>csv</extention>
@@ -821,59 +874,6 @@
     <GUI>
       <xloc>544</xloc>
       <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Regex evaluation</name>
-    <type>RegexEval</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <script>.*"time":"(\d{8}:\d{4})".*</script>
-    <matcher>hora_json</matcher>
-    <resultfieldname>regex_ok</resultfieldname>
-    <usevar>N</usevar>
-    <allowcapturegroups>Y</allowcapturegroups>
-    <replacefields>N</replacefields>
-    <canoneq>N</canoneq>
-    <caseinsensitive>N</caseinsensitive>
-    <comment>N</comment>
-    <dotall>N</dotall>
-    <multiline>N</multiline>
-    <unicode>N</unicode>
-    <unix>N</unix>
-    <fields>
-      <field>
-        <name>data_hora_utc</name>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-        <currency/>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>464</xloc>
-      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
