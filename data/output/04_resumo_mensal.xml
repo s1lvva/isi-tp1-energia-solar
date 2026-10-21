@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resumo_mensal>
+<registo><cenario>C</cenario> <mes>01</mes> <prod_kwh>354,54</prod_kwh> <consumo_kwh>434,25</consumo_kwh> <autoconsumo_kwh>126,39</autoconsumo_kwh> <excedente_kwh>228,16</excedente_kwh></registo>
+<registo><cenario>C</cenario> <mes>02</mes> <prod_kwh>476,41</prod_kwh> <consumo_kwh>359,06</consumo_kwh> <autoconsumo_kwh>141,18</autoconsumo_kwh> <excedente_kwh>335,24</excedente_kwh></registo>
+<registo><cenario>C</cenario> <mes>03</mes> <prod_kwh>443,81</prod_kwh> <consumo_kwh>358,98</consumo_kwh> <autoconsumo_kwh>143,95</autoconsumo_kwh> <excedente_kwh>299,85</excedente_kwh></registo>
+<registo><cenario>C</cenario> <mes>04</mes> <prod_kwh>571,88</prod_kwh> <consumo_kwh>304,90</consumo_kwh> <autoconsumo_kwh>152,13</autoconsumo_kwh> <excedente_kwh>419,75</excedente_kwh></registo>
+<registo><cenario>C</cenario> <mes>05</mes> <prod_kwh>628,42</prod_kwh> <consumo_kwh>292,72</consumo_kwh> <autoconsumo_kwh>154,23</autoconsumo_kwh> <excedente_kwh>474,18</excedente_kwh></registo>
+<registo><cenario>C</cenario> <mes>06</mes> <prod_kwh>585,46</prod_kwh> <consumo_kwh>287,84</consumo_kwh> <autoconsumo_kwh>155,89</autoconsumo_kwh> <excedente_kwh>429,57</excedente_kwh></registo>
+<registo><cenario>C</cenario> <mes>07</mes> <prod_kwh>660,55</prod_kwh> <consumo_kwh>315,50</consumo_kwh> <autoconsumo_kwh>174,21</autoconsumo_kwh> <excedente_kwh>486,34</excedente_kwh></registo>
+<registo><cenario>C</cenario> <mes>08</mes> <prod_kwh>642,20</prod_kwh> <consumo_kwh>320,79</consumo_kwh> <autoconsumo_kwh>167,91</autoconsumo_kwh> <excedente_kwh>474,29</excedente_kwh></registo>
+<registo><cenario>C</cenario> <mes>09</mes> <prod_kwh>477,52</prod_kwh> <consumo_kwh>289,82</consumo_kwh> <autoconsumo_kwh>133,61</autoconsumo_kwh> <excedente_kwh>343,91</excedente_kwh></registo>
+<registo><cenario>C</cenario> <mes>10</mes> <prod_kwh>327,82</prod_kwh> <consumo_kwh>298,42</consumo_kwh> <autoconsumo_kwh>105,91</autoconsumo_kwh> <excedente_kwh>221,91</excedente_kwh></registo>
+<registo><cenario>C</cenario> <mes>11</mes> <prod_kwh>238,20</prod_kwh> <consumo_kwh>328,77</consumo_kwh> <autoconsumo_kwh>94,97</autoconsumo_kwh> <excedente_kwh>143,23</excedente_kwh></registo>
+<registo><cenario>C</cenario> <mes>12</mes> <prod_kwh>282,29</prod_kwh> <consumo_kwh>408,93</consumo_kwh> <autoconsumo_kwh>111,01</autoconsumo_kwh> <excedente_kwh>171,28</excedente_kwh></registo>
+<registo><cenario>B</cenario> <mes>01</mes> <prod_kwh>265,91</prod_kwh> <consumo_kwh>434,25</consumo_kwh> <autoconsumo_kwh>120,47</autoconsumo_kwh> <excedente_kwh>145,44</excedente_kwh></registo>
+<registo><cenario>B</cenario> <mes>02</mes> <prod_kwh>357,31</prod_kwh> <consumo_kwh>359,06</consumo_kwh> <autoconsumo_kwh>136,86</autoconsumo_kwh> <excedente_kwh>220,45</excedente_kwh></registo>
+<registo><cenario>B</cenario> <mes>03</mes> <prod_kwh>332,85</prod_kwh> <consumo_kwh>358,98</consumo_kwh> <autoconsumo_kwh>137,14</autoconsumo_kwh> <excedente_kwh>195,71</excedente_kwh></registo>
+<registo><cenario>B</cenario> <mes>04</mes> <prod_kwh>428,91</prod_kwh> <consumo_kwh>304,90</consumo_kwh> <autoconsumo_kwh>146,17</autoconsumo_kwh> <excedente_kwh>282,74</excedente_kwh></registo>
+<registo><cenario>B</cenario> <mes>05</mes> <prod_kwh>471,31</prod_kwh> <consumo_kwh>292,72</consumo_kwh> <autoconsumo_kwh>149,39</autoconsumo_kwh> <excedente_kwh>321,92</excedente_kwh></registo>
+<registo><cenario>B</cenario> <mes>06</mes> <prod_kwh>439,10</prod_kwh> <consumo_kwh>287,84</consumo_kwh> <autoconsumo_kwh>149,45</autoconsumo_kwh> <excedente_kwh>289,64</excedente_kwh></registo>
+<registo><cenario>B</cenario> <mes>07</mes> <prod_kwh>495,41</prod_kwh> <consumo_kwh>315,50</consumo_kwh> <autoconsumo_kwh>167,11</autoconsumo_kwh> <excedente_kwh>328,30</excedente_kwh></registo>
+<registo><cenario>B</cenario> <mes>08</mes> <prod_kwh>481,65</prod_kwh> <consumo_kwh>320,79</consumo_kwh> <autoconsumo_kwh>160,79</autoconsumo_kwh> <excedente_kwh>320,86</excedente_kwh></registo>
+<registo><cenario>B</cenario> <mes>09</mes> <prod_kwh>358,14</prod_kwh> <consumo_kwh>289,82</consumo_kwh> <autoconsumo_kwh>128,20</autoconsumo_kwh> <excedente_kwh>229,94</excedente_kwh></registo>
+<registo><cenario>B</cenario> <mes>10</mes> <prod_kwh>245,86</prod_kwh> <consumo_kwh>298,42</consumo_kwh> <autoconsumo_kwh>98,90</autoconsumo_kwh> <excedente_kwh>146,97</excedente_kwh></registo>
+<registo><cenario>B</cenario> <mes>11</mes> <prod_kwh>178,65</prod_kwh> <consumo_kwh>328,77</consumo_kwh> <autoconsumo_kwh>86,80</autoconsumo_kwh> <excedente_kwh>91,85</excedente_kwh></registo>
+<registo><cenario>B</cenario> <mes>12</mes> <prod_kwh>211,72</prod_kwh> <consumo_kwh>408,93</consumo_kwh> <autoconsumo_kwh>104,38</autoconsumo_kwh> <excedente_kwh>107,34</excedente_kwh></registo>
+<registo><cenario>A</cenario> <mes>01</mes> <prod_kwh>177,27</prod_kwh> <consumo_kwh>434,25</consumo_kwh> <autoconsumo_kwh>111,61</autoconsumo_kwh> <excedente_kwh>65,66</excedente_kwh></registo>
+<registo><cenario>A</cenario> <mes>02</mes> <prod_kwh>238,21</prod_kwh> <consumo_kwh>359,06</consumo_kwh> <autoconsumo_kwh>128,39</autoconsumo_kwh> <excedente_kwh>109,81</excedente_kwh></registo>
+<registo><cenario>A</cenario> <mes>03</mes> <prod_kwh>221,90</prod_kwh> <consumo_kwh>358,98</consumo_kwh> <autoconsumo_kwh>124,32</autoconsumo_kwh> <excedente_kwh>97,58</excedente_kwh></registo>
+<registo><cenario>A</cenario> <mes>04</mes> <prod_kwh>285,94</prod_kwh> <consumo_kwh>304,90</consumo_kwh> <autoconsumo_kwh>137,57</autoconsumo_kwh> <excedente_kwh>148,37</excedente_kwh></registo>
+<registo><cenario>A</cenario> <mes>05</mes> <prod_kwh>314,21</prod_kwh> <consumo_kwh>292,72</consumo_kwh> <autoconsumo_kwh>140,77</autoconsumo_kwh> <excedente_kwh>173,43</excedente_kwh></registo>
+<registo><cenario>A</cenario> <mes>06</mes> <prod_kwh>292,73</prod_kwh> <consumo_kwh>287,84</consumo_kwh> <autoconsumo_kwh>138,47</autoconsumo_kwh> <excedente_kwh>154,26</excedente_kwh></registo>
+<registo><cenario>A</cenario> <mes>07</mes> <prod_kwh>330,27</prod_kwh> <consumo_kwh>315,50</consumo_kwh> <autoconsumo_kwh>156,55</autoconsumo_kwh> <excedente_kwh>173,72</excedente_kwh></registo>
+<registo><cenario>A</cenario> <mes>08</mes> <prod_kwh>321,10</prod_kwh> <consumo_kwh>320,79</consumo_kwh> <autoconsumo_kwh>151,82</autoconsumo_kwh> <excedente_kwh>169,28</excedente_kwh></registo>
+<registo><cenario>A</cenario> <mes>09</mes> <prod_kwh>238,76</prod_kwh> <consumo_kwh>289,82</consumo_kwh> <autoconsumo_kwh>119,08</autoconsumo_kwh> <excedente_kwh>119,69</excedente_kwh></registo>
+<registo><cenario>A</cenario> <mes>10</mes> <prod_kwh>163,91</prod_kwh> <consumo_kwh>298,42</consumo_kwh> <autoconsumo_kwh>88,78</autoconsumo_kwh> <excedente_kwh>75,13</excedente_kwh></registo>
+<registo><cenario>A</cenario> <mes>11</mes> <prod_kwh>119,10</prod_kwh> <consumo_kwh>328,77</consumo_kwh> <autoconsumo_kwh>74,83</autoconsumo_kwh> <excedente_kwh>44,27</excedente_kwh></registo>
+<registo><cenario>A</cenario> <mes>12</mes> <prod_kwh>141,15</prod_kwh> <consumo_kwh>408,93</consumo_kwh> <autoconsumo_kwh>93,54</autoconsumo_kwh> <excedente_kwh>47,61</excedente_kwh></registo>
+</resumo_mensal>

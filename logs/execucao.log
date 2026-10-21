@@ -1,0 +1,49 @@
+2026-10-21 10:54:22.539 - 03 Transformar e exportar - Using run configuration [Pentaho local]
+2026-10-21 10:54:22.540 - 03_transformar - Expedindo in�cio para transforma��o [03_transformar]
+2026-10-21 10:54:22.611 - XML output.0 - Opening output stream in encoding: UTF-8
+2026-10-21 10:54:22.655 - CSV file input 3.0 - Header row skipped in file 'file:///C:/GitHub/isi-tp1-energia-solar/dataintegration/../data/input/cenarios.csv'
+2026-10-21 10:54:22.655 - CSV file input 2.0 - Header row skipped in file 'file:///C:/GitHub/isi-tp1-energia-solar/dataintegration/../data/output/02_perfis_15min.csv'
+2026-10-21 10:54:22.655 - CSV file input.0 - Header row skipped in file 'file:///C:/GitHub/isi-tp1-energia-solar/dataintegration/../data/output/01_pvgis_horario.csv'
+2026-10-21 10:54:22.656 - CSV file input 3.0 - Finished processing (I=6, O=0, R=0, W=5, U=0, E=0)
+2026-10-21 10:54:22.662 - Filter rows.0 - Finished processing (I=0, O=0, R=5, W=5, U=0, E=0)
+2026-10-21 10:54:22.663 - Write to log.0 - 
+2026-10-21 10:54:22.663 - Write to log.0 - ------------> Linenr 1------------------------------
+2026-10-21 10:54:22.663 - Write to log.0 - Cenário rejeitado: potência em falta
+2026-10-21 10:54:22.663 - Write to log.0 - 
+2026-10-21 10:54:22.663 - Write to log.0 - cenario = D
+2026-10-21 10:54:22.663 - Write to log.0 - descricao = 5 kWp orientados a sul, 30 graus
+2026-10-21 10:54:22.663 - Write to log.0 - potencia_kwp = null
+2026-10-21 10:54:22.663 - Write to log.0 - custo_instalacao_eur = 5600
+2026-10-21 10:54:22.663 - Write to log.0 - consumo_anual_kwh = 4000
+2026-10-21 10:54:22.663 - Write to log.0 - preco_compra_eur_kwh = 0.2
+2026-10-21 10:54:22.663 - Write to log.0 - preco_venda_eur_kwh = 0.05
+2026-10-21 10:54:22.663 - Write to log.0 - 
+2026-10-21 10:54:22.663 - Write to log.0 - ====================
+2026-10-21 10:54:22.667 - Unique rows.0 - Finished processing (I=0, O=0, R=4, W=3, U=0, E=0)
+2026-10-21 10:54:22.670 - Write to log.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2026-10-21 10:54:22.822 - CSV file input.0 - Finished processing (I=8761, O=0, R=0, W=8760, U=0, E=0)
+2026-10-21 10:54:22.839 - Select values.0 - Finished processing (I=0, O=0, R=8760, W=8760, U=0, E=0)
+2026-10-21 10:54:22.843 - Select values 2.0 - Finished processing (I=0, O=0, R=8760, W=8760, U=0, E=0)
+2026-10-21 10:54:23.012 - Calculator.0 - Finished processing (I=0, O=0, R=8760, W=8760, U=0, E=0)
+2026-10-21 10:54:23.030 - Memory group by.0 - Finished processing (I=0, O=0, R=8760, W=8759, U=0, E=0)
+2026-10-21 10:54:23.048 - CSV file input 2.0 - Finished processing (I=35041, O=0, R=0, W=35040, U=0, E=0)
+2026-10-21 10:54:23.052 - Strings cut.0 - Finished processing (I=0, O=0, R=35040, W=35040, U=0, E=0)
+2026-10-21 10:54:23.059 - Value mapper.0 - Finished processing (I=0, O=0, R=35040, W=35040, U=0, E=0)
+2026-10-21 10:54:23.064 - Concat fields.0 - Finished processing (I=0, O=0, R=35040, W=35040, U=0, E=0)
+2026-10-21 10:54:23.077 - Memory group by 2.0 - Finished processing (I=0, O=0, R=35040, W=8759, U=0, E=0)
+2026-10-21 10:54:23.263 - Stream lookup.0 - Finished processing (I=0, O=0, R=17518, W=8759, U=0, E=0)
+2026-10-21 10:54:23.820 - Join rows (cartesian product).0 - Finished processing (I=0, O=0, R=8762, W=26277, U=0, E=0)
+2026-10-21 10:54:23.830 - Calculator 2.0 - Finished processing (I=0, O=0, R=26277, W=26277, U=0, E=0)
+2026-10-21 10:54:23.968 - User defined Java expression.0 - Finished processing (I=0, O=0, R=26277, W=78831, U=0, E=0)
+2026-10-21 10:54:23.974 - Strings cut 2.0 - Finished processing (I=0, O=0, R=26277, W=26277, U=0, E=0)
+2026-10-21 10:54:23.974 - Memory group by 3.0 - Finished processing (I=0, O=0, R=26277, W=3, U=0, E=0)
+2026-10-21 10:54:23.979 - Calculator 3.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2026-10-21 10:54:23.979 - Memory group by 4.0 - Finished processing (I=0, O=0, R=26277, W=36, U=0, E=0)
+2026-10-21 10:54:23.984 - Sort rows 2.0 - Finished processing (I=0, O=0, R=36, W=72, U=0, E=0)
+2026-10-21 10:54:23.984 - Sort rows.0 - Finished processing (I=0, O=0, R=3, W=9, U=0, E=0)
+2026-10-21 10:54:23.990 - JSON output.0 - Finished processing (I=0, O=3, R=3, W=3, U=0, E=0)
+2026-10-21 10:54:23.991 - Text file output 2.0 - Finished processing (I=0, O=4, R=3, W=3, U=0, E=0)
+2026-10-21 10:54:23.991 - Text file output 3.0 - Finished processing (I=0, O=37, R=36, W=36, U=0, E=0)
+2026-10-21 10:54:23.996 - XML output.0 - Finished processing (I=0, O=36, R=36, W=36, U=0, E=0)
+2026-10-21 10:54:24.148 - Text file output.0 - Finished processing (I=0, O=26278, R=26277, W=26277, U=0, E=0)
+2026-10-21 10:54:24.333 - Microsoft Excel writer.0 - Finished processing (I=0, O=4, R=3, W=3, U=0, E=0)
