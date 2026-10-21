@@ -5,12 +5,12 @@
 |---|---|
 | **Aluno** | André Silva — n.º 27965 |
 | **Unidade Curricular** | Integração de Sistemas de Informação (ISI) |
-| **Curso** | Licenciatura em Engenharia de Sistemas Informáticos — IPCA |
+| **Curso** | Licenciatura em Engenharia de Sistemas Informáticos — UPCA |
 | **Ano letivo** | 2026/27 — Trabalho Prático I |
 | **Docentes** | Luís Ferreira e Óscar Ribeiro |
 | **Ferramenta** | Pentaho Data Integration (Kettle) 10.2 CE |
 
-**🎬 Vídeo de demonstração:** _(colocar aqui o link)_
+**🎬 Vídeo de demonstração:** https://youtu.be/FNlq7aSmb3g
 
 ---
 
